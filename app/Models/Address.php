@@ -11,8 +11,8 @@ class Address extends Model
 
     protected $fillable = ['street', 'city', 'province', 'country', 'postal_code', 'user_id'];
 
-    public function User()
+    public function contact()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Contact::class);
     }
 }
