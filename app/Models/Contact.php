@@ -11,8 +11,13 @@ class Contact extends Model
 
     protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'user_id'];
 
-    public function User()
+    public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
     }
 }
