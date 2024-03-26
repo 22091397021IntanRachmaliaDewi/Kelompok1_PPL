@@ -15,11 +15,6 @@ class User extends AuthenticatableUser implements Authenticatable
 
     public function Contact()
     {
-        return $this->hasOne(Contact::class);
-    }
-
-    public function Addresses()
-    {
-        return $this->hasMany(Address::class);
+        return $this->hasMany(Contact::class);
     }
 }
